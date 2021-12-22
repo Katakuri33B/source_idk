@@ -41,13 +41,13 @@ self:DrawModel()
 
 	ang:RotateAroundAxis( oang:Up(), 90 )
 	ang:RotateAroundAxis( oang:Right(), -90 )
-	ang:RotateAroundAxis( oang:Up(), 90)
+	ang:RotateAroundAxis( oang:Up(), 0)
 
-	pos = pos + oang:Forward() * -5 + oang:Up() * 40 + oang:Right() * 0
+	pos = pos + oang:Forward() * 20 + oang:Up() * 40 + oang:Right() * 20
 
 	if dist > 200 then return end
 	cam.Start3D2D( pos, ang, 0.025 )
-			draw.SimpleText("Waffen-Amboss", "werkbank.title", 0, 0, Color(255,255,255),TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+			
 	cam.End3D2D()
 end
 
@@ -108,7 +108,7 @@ function verbessernpaint(s, w, h)
 		draw.SimpleText("Du hast nicht genug Gold", "werkbank.ui", w / 2, h / 2 , Color(255, 25, 25), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 	else 
 		draw.SimpleText("Waffen verbessern", "werkbank.ui", w / 2, h / 2 - 10, Color(25, 255, 25), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
-		draw.SimpleText("'50% Damage Buff auf deine Waffen' (15.000 Gold)", "werkbank.ui.small", w / 2, h / 2 + 20, Color(25, 255, 25), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+		draw.SimpleText("' Gilt für jede Waffe die du gerade hast ' (15.000 Gold)", "werkbank.ui.small", w / 2, h / 2 + 20, Color(25, 255, 25), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 	end
 end
 
